@@ -1,0 +1,129 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 0 30px;
+}
+.navbar ul{
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+.navbar ul a {
+    text-decoration: none;
+    color: black;
+}
+body{
+    background-color: rgb(73, 73, 73);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 20;
+    width: 70%;
+    height: 70%;
+    margin-top: 50px;
+    border-radius: 2%;
+    /* overflow: hidden; */
+
+}
+
+.container::after{
+    content: "";
+    position : absolute;
+    height: 800px;
+    width: 800px;
+    right: 4%;
+    left: 50%;
+    top:10%;
+    background-color: rgb(220, 197, 96);
+    /* clip-path: circle(10px at 100px 100px); */
+    clip-path: circle(50%);
+    opacity: 0.5;
+
+}
+.mainsection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    
+
+}
+.para{
+    font-size: 15px;
+   width: 300px;
+
+}
+
+.section2 > .nikeImage {
+    margin-right: 50px;
+    translate : 50px 0;
+    z-index: 100;
+    width: 500px;
+    height: 350px;
+}
+
+.section2 {
+    z-index: 80;
+}
+@media (min-width:688px) and (max-width:990px){
+    .section2 > .nikeImage{
+        height: 250x;
+        width: 300px;
+        translate:  -80px;
+     }
+     .mainsection{
+        translate: 80px 0;
+     }
+     .container{
+        height: 75%;
+        width: 75%;
+     }
+     .container::after{
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        height: 600px;
+        width: 600px;
+        top: 20%;
+        right: -24%;
+}
+    
+}
+
+@media  (max-width:688px) {
+     .navbar{
+         flex-direction: column;
+     }
+     .mainsection{
+        flex-direction: column;
+     }
+     .container::after{
+        height: 200px;
+        width: 200px;
+       top: 88%;
+       left:5em ;
+       
+     }
+     .container{
+        width: 80%;
+        height: 90%;
+     }
+     .section2 > .nikeImage{
+        height: 120px;
+        width: 150px;
+        translate : 0px -50px;
+
+     }
+
+ }
